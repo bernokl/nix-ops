@@ -20,7 +20,8 @@
 ** For further consideration:
 - I think the nix-serve-flake we run can be vastly simplified, what we call https://github.com/edolstra/nix-serve, it has some options for signing packages that we might care about as caches prolifirates, I am not sure if there is additional value over just nixpkgs.nix-serve I do not understand, but it is simple to use.
 - When I started this project I did not understand how simple it is to just nixpkgs.nix-serve any store, there is 4 very simple alternatives to what we have. At some point it would be good to evaluate this in context of data syncing https://nixos.org/manual/nix/stable/package-management/binary-cache-substituter.html
-- With understanding I have not I would like to re-visit this entire architecture, there are lots more possibilities I now see
+- This might very well come into the discussion https://flokli.de/posts/2021-12-10-nix-casync-intro/ the repo might simply become how we manage nix-casync between our stores, we have a good foundation with replacable tools to start from.
+- With the understanding I have now I would like to re-visit this entire architecture, there are lots more possibilities I now see, rabbit holes to go down, will be good to talk to others who are using cache to hear pain points.
 ** Purpose of this exploration   
 - A few functions we might try to run from opsshell include:
 - Containerization, try to containerize our entrypoint
